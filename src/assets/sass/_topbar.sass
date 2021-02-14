@@ -1,0 +1,76 @@
+@import "constants"
+
+.theme-bg-primary
+  background-color: $background-color-light
+
+@media (min-width: 576px)
+  .container-sm, .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container-md, .container-sm, .container
+    max-width: 720px
+
+@media (min-width: 992px)
+  .container-lg, .container-md, .container-sm, .container
+    max-width: 960px
+
+@media (min-width: 1200px)
+  .container-xl, .container-lg, .container-md, .container-sm, .container
+    max-width: 1140px
+
+.container, .container-fluid, .container-xl, .container-lg, .container-md, .container-sm
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+
+.link-on-bg, a.link-on-bg
+  color: rgba(0,0,0,0.5)
+
+.lead
+  font-size: 1.25rem
+  font-weight: 300
+
+.font-weight-bold
+  font-weight: 700 !important
+  
+.mt-0, .my-0
+  margin-top: 0 !important
+
+.display-4
+  font-size: 3.5rem
+  font-weight: 300
+  line-height: 1.2
+
+.profile-image
+  max-width: 240px
+  max-height: 240px
+
+.media
+  display: flex
+  align-items: flex-start
+
+.flex-column
+  flex-direction: column !important
+
+@media (min-width: 768px)
+  .flex-md-row
+    flex-direction: row !important
+
+.rounded
+  border-radius: .25rem !important
+
+*, *::before, *::after
+  box-sizing: border-box
+
+@media (min-width: 768px)
+  .text-md-left
+    text-align: left !important
+
+.text-center
+  text-align: center
+
+.media-body
+  flex: 1

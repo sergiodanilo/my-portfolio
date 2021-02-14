@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic')
+@import "layout"
+@import "responsive"
+
+body
+  margin: 0
+  font-family: $font-stack
+  -webkit-font-smoothing: antialiased
+  font-size: 1rem
+  font-weight: 400
+  line-height: 1.5
+  color: $primary-color
+  text-align: left
+  background-color: $second-color
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section
+  display: block
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  margin-bottom: .5rem
+  font-weight: 500
+  line-height: 1.2
+
+h1, h2, h3, h4, h5, h6
+  margin-top: 0
+  margin-bottom: .5rem
+
+h2, .h2
+  font-size: 2rem
+
+img
+  vertical-align: middle
+  border-style: none
+
+svg
+  overflow: hidden
+  vertical-align: middle
+
+ol, ul, dl
+  margin-top: 0
+  margin-bottom: 1rem
+
+li
+  display: list-item
+  text-align: -webkit-match-parent
+
+a
+  color: $background-color-light
+  text-decoration: none
+  background-color: transparent
+
+button, [type="button"], [type="reset"], [type="submit"]
+  -webkit-appearance: button
+
+button, select
+  text-transform: none
+
+button, input
+  overflow: visible
+
+input, button, select, optgroup, textarea
+  margin: 0
+  font-family: inherit
+  font-size: inherit
+  line-height: inherit
+
+button
+  border-radius: 0
