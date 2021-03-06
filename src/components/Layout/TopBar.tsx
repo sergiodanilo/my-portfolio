@@ -20,8 +20,6 @@ export default function TopBar() {
     }
   `)
 
-  console.log(data)
-
   return (
     <div className="header-intro theme-bg-primary text-white py-5">
       <div className="container">
