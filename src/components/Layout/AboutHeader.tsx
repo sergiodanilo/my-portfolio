@@ -2,7 +2,7 @@ import React from "react";
 import {graphql, useStaticQuery} from "gatsby";
 import Img from "gatsby-image";
 
-export default function TopBar() {
+export default function AboutHeader() {
 
   const data = useStaticQuery(graphql`
     query Images {

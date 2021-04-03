@@ -1,13 +1,15 @@
 import * as React from "react"
 
 import "../assets/sass/_styles.sass"
-import Header from "../components/Layout/Header";
+import Menu from "../components/Layout/Menu";
+import AboutHeader from "../components/Layout/AboutHeader";
 import Skills from "../components/Layout/Skills";
 
 const IndexPage = () => {
   return (
     <>
-      <Header />
+      <Menu />
+      <AboutHeader />
       <Skills />
     </>
   )

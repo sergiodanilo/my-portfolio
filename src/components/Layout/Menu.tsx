@@ -1,32 +1,54 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "gatsby"
-
+import update from 'immutability-helper';
 import find from "lodash/find";
-import TopBar from "./TopBar";
 
-const menu = [
-  {label: "About", ref: React.createRef<HTMLLIElement>(), link: '/', active: true },
-  {label: "Projects", ref: React.createRef<HTMLLIElement>(), link: '/projects', active: false },
-  {label: "Talks", ref: React.createRef<HTMLLIElement>(), link: '/talks', active: false },
+import { Link } from "gatsby";
+
+
+type Menu = {
+  label: string;
+  ref: any;
+  link: string;
+  active: boolean;
+}
+
+const initialMenu : Menu[] = [
+  {label: "About", ref: React.createRef<HTMLLIElement>(), link: '/', active: false },
   {label: "Blog", ref: React.createRef<HTMLLIElement>(), link: '/blog', active: false },
-  {label: "Resume", ref: React.createRef<HTMLLIElement>(), link: '/resume', active: false },
+  {label: "Resume", ref: React.createRef<HTMLLIElement>(), link: '/resume', active: true },
   {label: "Contact", ref: React.createRef<HTMLLIElement>(), link: '/contact', active: false }
 ]
 
-const Header = () => {
+const Menu = () => {
 
+  const [menu, setMenu] = useState<Menu[]>(initialMenu);
   const [menuWidth, setMenuWidth] = useState<number>(0);
   const [menuLeft, setMenuLeft] = useState<number>();
 
   useEffect(() => {
     setMenuWidth(menu[0].ref.current.getBoundingClientRect().width);
-    setMenuLeft(menu[0].ref.current.getBoundingClientRect().left);
+    setMenuLeft(menu[0].ref.current.getBoundingClientRect().left-14);
   }, []);
 
   const handleOnHover = (label: string) => {
     const itemMenu = find(menu, { label });
     setMenuWidth(itemMenu.ref.current.getBoundingClientRect().width);
-    setMenuLeft(itemMenu.ref.current.getBoundingClientRect().left);
+    setMenuLeft(itemMenu.ref.current.getBoundingClientRect().left-14);
+  }
+
+  const handleOnLeave = () => {
+    const itemMenu = find(menu, { active: true });
+    setMenuWidth(itemMenu.ref.current.getBoundingClientRect().width);
+    setMenuLeft(itemMenu.ref.current.getBoundingClientRect().left-14);
+  }
+
+  const setActiveMenu = (label: string) => {
+    const itemMenu = find(menu, { label });
+    const index = menu.indexOf(itemMenu);
+    const newMenuItem = update(menu[index], {active: {$set: true }});
+    const newMenu = update(menu, { $splice: [[index, 1, newMenuItem]]});
+    console.log(newMenu)
+    setMenu(newMenu);
   }
 
   return (
@@ -92,8 +114,13 @@ const Header = () => {
                       className={item.active ? 'nav-item mr-lg-3 active': 'nav-item mr-lg-3'}
                       ref={item.ref}
                       onMouseEnter={() => handleOnHover(item.label)}
+                      onMouseLeave={() => handleOnLeave()}
                     >
-                      <Link to={item.link} className="nav-link">
+                      <Link
+                        to={item.link}
+                        className="nav-link"
+                        onClick={() => setActiveMenu(item.label)}
+                      >
                         {item.label}
                       </Link>
                     </li>
@@ -105,10 +132,8 @@ const Header = () => {
           </nav>
         </div>
       </div>
-
-      <TopBar />
     </header>
   )
 }
 
-export default Header;
+export default Menu;
