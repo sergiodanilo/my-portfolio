@@ -1,15 +1,23 @@
 import React from "react";
 
-const frontend = [
-  "Vanilla JS", "React", "Node/Express/Nest", "HTML/CSS"
+const backend = [
+  "Java", "Spring (Boot, Data, Security)", "JPA (Hibernate, MyBatis)", "Rest, SOAP"
 ]
 
-const backend = [
-  "Java SE/EE", "Spring MVC", "Spring Security", "Spring Data"
+const frontendBasic = [
+  "HTML", "CSS", "Javascript"
+]
+
+const frontendFrameworks = [
+  "React", "Angular", "Node", "Express", "Webpack"
+]
+
+const frontendStyles = [
+  "Bootstrap", "AntDesign", "Material UI"
 ]
 
 const others = [
-  "Git", "Docker", "Jenkins", "PL/SQL"
+  "Oracle (PL/SQL)", "PostgreSQL", "MongoDB", "Git", "Docker", "Jenkins"
 ]
 
 const Skills = () => {
@@ -18,7 +26,7 @@ const Skills = () => {
     <section className="skills-section section py-5">
       <div className="container">
         <h3 className="section-title font-weight-bold text-center mb-3">Skills Overview</h3>
-        <div className="section-intro mx-auto text-center mb-5 text-secondary">I have more than 8 years' experience
+        <div className="section-intro mx-auto text-center mb-5 text-secondary">I have more than 10 years of experience
           building rich web applications for clients all over the world. Below is a quick overview of my main technical
           skill sets and tools I use. Want to find out more about my experience? <a href="resume.html">Check out my
             online resume</a>.
@@ -26,57 +34,6 @@ const Skills = () => {
 
         <div className="skills-blocks mx-auto pt-5">
           <div className="row">
-            <div className="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
-              <div className="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
-                <h4 className="skills-cat text-center mb-3 mt-5">Frontend</h4>
-                <div className="skills-icon-holder position-absolute d-inline-block rounded-circle text-center">
-                  <svg width="44px" height="37px" viewBox="0 0 44 37" version="1.1">
-                    <title>frontend-icon</title>
-                    <desc>Created with Sketch.</desc>
-                    <defs></defs>
-                    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
-                      <g id="Landing" transform="translate(-477.000000, -608.000000)" stroke="#FFFFFF" strokeWidth="1.5625">
-                        <g id="Section-skills" transform="translate(292.000000, 424.000000)">
-                          <g id="content" transform="translate(0.000000, 162.000000)">
-                            <g id="Col-L">
-                              <g id="icon" transform="translate(167.000000, 0.000000)">
-                                <g id="frontend-icon" transform="translate(15.000000, 15.000000)">
-                                  <path d="M46.09375,16.40625 L3.90625,16.40625 L46.09375,16.40625 Z" id="Path"></path>
-                                  <path d="M43.75,8.59375 L6.25,8.59375 C4.95546875,8.59375 3.90625,9.64296875 3.90625,10.9375 L3.90625,40.625 C3.90625,41.9195312 4.95546875,42.96875 6.25,42.96875 L43.75,42.96875 C45.0445313,42.96875 46.09375,41.9195312 46.09375,40.625 L46.09375,10.9375 C46.09375,9.64296875 45.0445313,8.59375 43.75,8.59375 L43.75,8.59375 Z" id="Path"></path>
-                                  <path d="M41.40625,12.5 C41.40625,12.9320312 41.0570312,13.28125 40.625,13.28125 C40.1929688,13.28125 39.84375,12.9320312 39.84375,12.5 C39.84375,12.0679688 40.1929688,11.71875 40.625,11.71875 C41.0570312,11.71875 41.40625,12.0679688 41.40625,12.5 L41.40625,12.5 Z" id="Path"></path>
-                                  <path d="M36.71875,12.5 C36.71875,12.9320312 36.3695312,13.28125 35.9375,13.28125 C35.5054688,13.28125 35.15625,12.9320312 35.15625,12.5 C35.15625,12.0679688 35.5054688,11.71875 35.9375,11.71875 C36.3695312,11.71875 36.71875,12.0679688 36.71875,12.5 L36.71875,12.5 Z" id="Path"></path>
-                                  <path d="M32.03125,12.5 C32.03125,12.9320312 31.6820312,13.28125 31.25,13.28125 C30.8179688,13.28125 30.46875,12.9320312 30.46875,12.5 C30.46875,12.0679688 30.8179688,11.71875 31.25,11.71875 C31.6820312,11.71875 32.03125,12.0679688 32.03125,12.5 L32.03125,12.5 Z" id="Path"></path>
-                                  <polyline id="Path" points="19.53125 25.78125 14.84375 29.6875 19.53125 33.59375"></polyline>
-                                  <polyline id="Path" points="30.46875 25.78125 35.15625 29.6875 30.46875 33.59375"></polyline>
-                                  <path d="M22.65625,36.71875 L27.34375,22.65625 L22.65625,36.71875 Z" id="Path"></path>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-
-                <ul className="skills-list list-unstyled text-secondary">
-                  {
-                    frontend.map((item, idx) =>
-                      <li key={idx} className="mb-2">
-                        <svg className="svg-inline--fa fa-check fa-w-16 mr-2 text-primary" aria-hidden="true"
-                             focusable="false" data-prefix="fas" data-icon="check" role="img"
-                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                          <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-                        </svg>
-                        {item}
-                      </li>
-                    )
-                  }
-                </ul>
-              </div>
-            </div>
-
             <div className="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
               <div className="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
                 <h4 className="skills-cat text-center mb-3 mt-5">Backend</h4>
@@ -105,6 +62,7 @@ const Skills = () => {
                     </g>
                   </svg>
                 </div>
+
                 <ul className="skills-list list-unstyled text-secondary">
                   {
                     backend.map((item, idx) =>
@@ -123,9 +81,95 @@ const Skills = () => {
               </div>
             </div>
 
+            <div className="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
+              <div className="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
+                <h4 className="skills-cat text-center mb-3 mt-5">Frontend</h4>
+                <div className="skills-icon-holder position-absolute d-inline-block rounded-circle text-center">
+                <svg width="44px" height="37px" viewBox="0 0 44 37" version="1.1">
+                    <title>frontend-icon</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
+                      <g id="Landing" transform="translate(-477.000000, -608.000000)" stroke="#FFFFFF" strokeWidth="1.5625">
+                        <g id="Section-skills" transform="translate(292.000000, 424.000000)">
+                          <g id="content" transform="translate(0.000000, 162.000000)">
+                            <g id="Col-L">
+                              <g id="icon" transform="translate(167.000000, 0.000000)">
+                                <g id="frontend-icon" transform="translate(15.000000, 15.000000)">
+                                  <path d="M46.09375,16.40625 L3.90625,16.40625 L46.09375,16.40625 Z" id="Path"></path>
+                                  <path d="M43.75,8.59375 L6.25,8.59375 C4.95546875,8.59375 3.90625,9.64296875 3.90625,10.9375 L3.90625,40.625 C3.90625,41.9195312 4.95546875,42.96875 6.25,42.96875 L43.75,42.96875 C45.0445313,42.96875 46.09375,41.9195312 46.09375,40.625 L46.09375,10.9375 C46.09375,9.64296875 45.0445313,8.59375 43.75,8.59375 L43.75,8.59375 Z" id="Path"></path>
+                                  <path d="M41.40625,12.5 C41.40625,12.9320312 41.0570312,13.28125 40.625,13.28125 C40.1929688,13.28125 39.84375,12.9320312 39.84375,12.5 C39.84375,12.0679688 40.1929688,11.71875 40.625,11.71875 C41.0570312,11.71875 41.40625,12.0679688 41.40625,12.5 L41.40625,12.5 Z" id="Path"></path>
+                                  <path d="M36.71875,12.5 C36.71875,12.9320312 36.3695312,13.28125 35.9375,13.28125 C35.5054688,13.28125 35.15625,12.9320312 35.15625,12.5 C35.15625,12.0679688 35.5054688,11.71875 35.9375,11.71875 C36.3695312,11.71875 36.71875,12.0679688 36.71875,12.5 L36.71875,12.5 Z" id="Path"></path>
+                                  <path d="M32.03125,12.5 C32.03125,12.9320312 31.6820312,13.28125 31.25,13.28125 C30.8179688,13.28125 30.46875,12.9320312 30.46875,12.5 C30.46875,12.0679688 30.8179688,11.71875 31.25,11.71875 C31.6820312,11.71875 32.03125,12.0679688 32.03125,12.5 L32.03125,12.5 Z" id="Path"></path>
+                                  <polyline id="Path" points="19.53125 25.78125 14.84375 29.6875 19.53125 33.59375"></polyline>
+                                  <polyline id="Path" points="30.46875 25.78125 35.15625 29.6875 30.46875 33.59375"></polyline>
+                                  <path d="M22.65625,36.71875 L27.34375,22.65625 L22.65625,36.71875 Z" id="Path"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+
+                <h4 className="mb-3">Basics</h4>
+                <ul className="skills-list list-unstyled text-secondary">
+                  {
+                    frontendBasic.map((item, idx) =>
+                      <li key={idx} className="mb-2">
+                        <svg className="svg-inline--fa fa-check fa-w-16 mr-2 text-primary" aria-hidden="true"
+                             focusable="false" data-prefix="fas" data-icon="check" role="img"
+                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                          <path fill="currentColor"
+                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
+                        </svg>
+                        {item}
+                      </li>
+                    )
+                  }
+                </ul>
+                <hr />
+                <h4 className="mb-3 mt-4">Frameworks</h4>
+                <ul className="skills-list list-unstyled text-secondary">
+                  {
+                    frontendFrameworks.map((item, idx) =>
+                      <li key={idx} className="mb-2">
+                        <svg className="svg-inline--fa fa-check fa-w-16 mr-2 text-primary" aria-hidden="true"
+                             focusable="false" data-prefix="fas" data-icon="check" role="img"
+                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                          <path fill="currentColor"
+                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
+                        </svg>
+                        {item}
+                      </li>
+                    )
+                  }
+                </ul>
+                <hr />
+                <h4 className="mb-3 mt-4">Styles</h4>
+                <ul className="skills-list list-unstyled text-secondary">
+                  {
+                    frontendStyles.map((item, idx) =>
+                      <li key={idx} className="mb-2">
+                        <svg className="svg-inline--fa fa-check fa-w-16 mr-2 text-primary" aria-hidden="true"
+                             focusable="false" data-prefix="fas" data-icon="check" role="img"
+                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                          <path fill="currentColor"
+                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
+                        </svg>
+                        {item}
+                      </li>
+                    )
+                  }
+                </ul>
+              </div>
+            </div>
+
             <div className="skills-block col-12 col-lg-4">
               <div className="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
-                <h4 className="skills-cat text-center mb-3 mt-5">Others</h4>
+                <h4 className="skills-cat text-center mb-3 mt-5">Database & DevOps</h4>
                 <div className="skills-icon-holder position-absolute d-inline-block rounded-circle text-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="44px" height="42px" viewBox="0 0 44 42" version="1.1">
                     <title>swiss_army_knife</title>

@@ -6,7 +6,7 @@ export default function AboutHeader() {
 
   const data = useStaticQuery(graphql`
     query Images {
-      image: file(relativePath: {eq: "profile.jpg"}) {
+      image: file(relativePath: {eq: "profile.png"}) {
         id
         childImageSharp {
           fixed {
@@ -31,12 +31,9 @@ export default function AboutHeader() {
           <div className="media-body text-center text-md-left">
             <div className="lead">Hello, my name is</div>
             <h2 className="mt-0 display-4 font-weight-bold">Sérgio Holanda</h2>
-            <div className="bio mb-3">I'm a full-stack developer specialised in frontend and backend development for
-              complex scalable web apps. I write about web development on <a className="link-on-bg" href="blog.html">my
-                blog</a> and regularly <a className="link-on-bg" href="talks.html">speak</a> at various web
-              conferences and meetups. Want to know how I may help your project? Check out my project <a
-                className="link-on-bg" href="projects.html">case studies</a> and
-              <a className="link-on-bg" href="resume.html"> resume</a>.
+            <div className="bio mb-3">
+              A skilled Java developer with proven expertise in using new tools and technical developments
+              to drive improvements throughout an entire software development lifecycle. Frontend enthusiast.
             </div>
             <a className="theme-btn-on-bg btn font-weight-bold theme-btn-cta" href="contact.html">Hire Me</a>
 
