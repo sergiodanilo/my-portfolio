@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic')
 @import "layout"
 @import "responsive"
+@import "resume"
 
 body
   margin: 0
@@ -72,3 +73,35 @@ button
 
 .font-weight-bold
   font-weight: 700 !important
+
+.badge
+  display: inline-block
+  padding: .25em .4em
+  font-size: 75%
+  font-weight: 700
+  line-height: 1
+  text-align: center
+  white-space: nowrap
+  vertical-align: baseline
+  border-radius: .25rem
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
+
+.badge-pill
+  padding-right: .6em
+  padding-left: .6em
+  border-radius: 10rem
+
+.badge-secondary
+  color: #fff
+  background-color: #58677c
+
+.badge
+  padding: 0.35em 0.7em
+  padding-bottom: 0.4em
+
+.badge-light
+  color: #434E5E
+  background-color: #f5f6f8
+
+.theme-progress-bar-dark
+  background-color: #58677c

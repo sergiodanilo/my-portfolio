@@ -22,30 +22,25 @@ const Menu = () => {
       {label: "Resume", ref: React.createRef<HTMLLIElement>(), link: '/resume', active: false }
     ]
   );
-  const [menuWidth, setMenuWidth] = useState<number>(0);
-  const [menuLeft, setMenuLeft] = useState<number>();
 
-  useEffect(() => {
-    changeSlideLinePosition(menu[0]);
-  }, []);
+  const [slideLineWidth, setSlideLineWidth] = useState<number>(0);
+  const [slideLinePadd, setSlideLinePadd] = useState<number>();
 
   const handleOnHover = (label: string) => {
     const itemMenu = find(menu, { label });
-    if (itemMenu) {
-      changeSlideLinePosition(itemMenu);
-    }
+    changeSlideLinePosition(itemMenu);
   }
 
   const handleOnLeave = () => {
     const itemMenu = find(menu, { active: true });
-    if (itemMenu) {
-      changeSlideLinePosition(itemMenu);
-    }
+    changeSlideLinePosition(itemMenu);
   }
 
   function changeSlideLinePosition(itemMenu: any) {
-    setMenuWidth(itemMenu.ref.current.getBoundingClientRect().width);
-    setMenuLeft(itemMenu.ref.current.getBoundingClientRect().left - PADDING_WIDTH);
+    if (itemMenu) {
+      setSlideLineWidth(itemMenu.ref.current.getBoundingClientRect().width);
+      setSlideLinePadd(itemMenu.ref.current.getBoundingClientRect().left - PADDING_WIDTH);
+    }
   }
 
   const setActiveMenu = (label: string) => {
@@ -55,11 +50,8 @@ const Menu = () => {
     const index = clonedMenu.indexOf(itemMenu);
     const newMenuItem = update(clonedMenu[index], {active: {$set: true }});
     const newMenu = update(clonedMenu, { $splice: [[index, 1, newMenuItem]]});
-    console.log("New menu", newMenu);
     setMenu(newMenu);
   }
-
-  console.log("Menu", menu);
 
   return (
     <header className="header">
@@ -116,7 +108,7 @@ const Menu = () => {
                   )
                 }
               </ul>
-              <span id="slide-line" style={{ width: menuWidth, left: menuLeft }} />
+              <span id="slide-line" style={{ width: slideLineWidth, left: slideLinePadd }} />
             </div>
           </nav>
         </div>

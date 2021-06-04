@@ -1,32 +1,16 @@
 import React from "react";
-import {graphql, useStaticQuery} from "gatsby";
-import Img from "gatsby-image";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function AboutHeader() {
-
-  const data = useStaticQuery(graphql`
-    query Images {
-      image: file(relativePath: {eq: "profile.png"}) {
-        id
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
-          }
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <div className="header-intro theme-bg-primary text-white py-5">
       <div className="container">
         <div className="profile-teaser media flex-column flex-md-row">
-          <Img
-            fixed={data.image.childImageSharp.fixed}
+          <StaticImage
+            src="../../assets/images/profile.png"
             className="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto"
+            alt="Profile"
           />
           <div className="media-body text-center text-md-left">
             <div className="lead">Hello, my name is</div>
@@ -41,5 +25,5 @@ export default function AboutHeader() {
         </div>
       </div>
     </div>
-  )
+  );
 }

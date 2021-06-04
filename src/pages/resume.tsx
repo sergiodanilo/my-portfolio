@@ -1,8 +1,14 @@
 import React from "react";
 
+import ResumeHeader from "../components/resume/ResumeHeader";
+import ResumeContent from "../components/resume/ResumeContent";
+
 const Resume = () => {
   return(
-    <h3>Resumé</h3>
+    <>
+      <ResumeHeader />
+      <ResumeContent />
+    </>
   )
 }
 
