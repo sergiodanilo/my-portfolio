@@ -230,9 +230,9 @@ const ResumeContent = () => {
 								        </li>
 
 								        <li className="mb-2">
-								            <div className="resume-skill-name">Node.js</div>
-									        <div className="progress resume-progress">
-											    <div className="progress-bar theme-progress-bar-dark" role="progressbar" style={{width: "80%"}}></div>
+													<div className="resume-skill-name">Node.js</div>
+													<div className="progress resume-progress">
+													<div className="progress-bar theme-progress-bar-dark" role="progressbar" style={{width: "80%"}}></div>
 											</div>
 								        </li>
 								        <li className="mb-2">
@@ -321,12 +321,9 @@ const ResumeContent = () => {
 							    </ul>
 						    </div>
 					    </section>
-
 				    </div>
 			    </div>
 		    </div>
-
-
 	    </div>
     </article>
   )
