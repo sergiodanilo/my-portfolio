@@ -19,8 +19,6 @@ export default function AboutHeader() {
               A skilled Java developer with proven expertise in using new tools and technical developments
               to drive improvements throughout an entire software development lifecycle. Frontend enthusiast.
             </div>
-            <a className="theme-btn-on-bg btn font-weight-bold theme-btn-cta" href="contact.html">Hire Me</a>
-
           </div>
         </div>
       </div>

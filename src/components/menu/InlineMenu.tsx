@@ -19,7 +19,8 @@ const Menu = () => {
   const [menu, setMenu] = useState<Menu[]>(
     [
       {label: "About", ref: React.createRef<HTMLLIElement>(), link: '/', active: true },
-      {label: "Resume", ref: React.createRef<HTMLLIElement>(), link: '/resume', active: false }
+      {label: "Resume", ref: React.createRef<HTMLLIElement>(), link: '/resume', active: false },
+      {label: "Blog", ref: React.createRef<HTMLLIElement>(), link: '/blog', active: false }
     ]
   );
 
